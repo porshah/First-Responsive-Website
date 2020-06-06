@@ -1,0 +1,91 @@
+/* phone layout */
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "top"
+    "box1"
+    "box2"
+    "box3"
+}
+
+.top{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 440px;
+    grid-area: top;
+    background-color: #2BCDC0;
+}
+
+section{
+    padding: 20px;
+    text-align: center;
+}
+
+
+h1{
+    color: white;
+    font-size: 40px;
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-weight: 600;
+    font-size: 30px
+}
+
+
+.orange, .blue, .green {
+    margin:0 auto;
+    height: 30px;
+    widows: 200px;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.green{
+    background-color: darkcyan;
+}
+
+
+/* main {grid-area: main} */
+    .bar1 {grid-area: bar1;}
+    .bar2 {grid-area: bar2;}
+    .bar3 {grid-area: bar3;}
+
+
+/*This was making the mobile view all unaligned*/
+/* @media(max-width:576px) { */
+    /* .container{ */
+        /* display: grid; */
+        /* grid-template-columns: repeat(1,1fr); */
+        /* grid-template-rows: repeat(3,1fr); */
+        /* grid-template-areas: */
+            /* "main main" */
+            /* "box1 box2" */
+            /* "box3 ."; */
+        /* flex-direction: column; */
+        /* justify-content: space-around; */
+        /* align-items: center; */
+    }
+
+    @media (min-width: 992px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas:
+        "main main main"
+        "box1 box2 box3";
+    }
+}
+    
